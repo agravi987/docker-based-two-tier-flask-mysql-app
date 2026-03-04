@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A beautifully designed modern Todo Application">
+    <title>Modern Todo App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container glass-panel">
+        <header>
+            <h1>My Tasks</h1>
+            <p>What needs to be done?</p>
+        </header>
+        
+        <form class="add-todo-form" action="/add" method="POST">
+            <input type="text" name="task" id="task" placeholder="e.g., Learn Docker..." required autocomplete="off">
+            <button type="submit" class="submit-btn" id="submit-button">
+                <span>Add</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="icon"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+        </form>
+
+        <div class="todo-list-container">
+            {% if todos and todos|length > 0 %}
+                <ul class="todo-list" id="todo-list">
+                    {% for todo in todos %}
+                        <li class="todo-item" id="todo-item-{{ todo.id }}">
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="todo-checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <span class="task-text">{{ todo.task }}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <div class="empty-state" id="empty-state">
+                    <div class="empty-icon">✨</div>
+                    <p>All caught up! Add a new task above.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
