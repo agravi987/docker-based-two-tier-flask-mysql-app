@@ -31,3 +31,5 @@ Thumbs.db
 Dockerfile
 docker-compose*.yml
 .dockerignore
+
+screenshots 
