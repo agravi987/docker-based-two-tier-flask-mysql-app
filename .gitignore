@@ -1,0 +1,58 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Flask specific
+instance/
+.webassets-cache
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Editors and OS files
+.idea/  # For PyCharm or other JetBrains IDEs
+.vscode/
+.DS_Store # macOS files
+Thumbs.db # Windows files
+
+# Unit test and coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+
+# Logs and other files
+*.log
+.env # Environment variables file, often sensitive
+.flaskenv
+
+# PyInstaller
+*.manifest
+*.spec

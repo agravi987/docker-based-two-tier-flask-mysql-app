@@ -1,0 +1,33 @@
+# Python artifacts
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+
+# Dependency management
+pip-wheel-cache/
+.pip-temp/
+
+# Editor/IDE-specific files
+.idea/
+.vscode/
+*.swp
+
+# Git and version control
+.git/
+.gitignore
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Docker files (optional, depends on project structure)
+Dockerfile
+docker-compose*.yml
+.dockerignore
